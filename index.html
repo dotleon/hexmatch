@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>something garden</title>
+    <style>
+        body {
+            background: url("images/bg.jpg") black no-repeat top center;
+        }
+        canvas {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #hitCanvas {
+            opacity: 0;
+        }
+        input {
+            position: absolute;
+            top: 900px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="uiCanvas" width="830" height="863"> </canvas>
+    <canvas id="objectCanvas" width="830" height="863" > </canvas>
+    <canvas id="effectCanvas" width="830" height="863" > </canvas>
+    <canvas id="hitCanvas" onmousedown="mouseDown(event)" onmousemove="mouseMove(event)" width="830" height="863" ></canvas>
+    
+    <input type="number" value="1" min="0.1" max="5" step="0.05" oninput="ChangeScale(this.value)"></input>
+
+    <script type="text/javascript" src="game.js"></script>
+</body>
+</html>
